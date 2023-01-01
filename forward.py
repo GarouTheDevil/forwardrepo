@@ -3,6 +3,7 @@ from pyrogram import Client, filters
 
 bot = Client('Forward bot', api_id= "1695333", api_hash= "acfb6f602239fc52a93d1847a3d850d1", bot_token= "5527448498:AAECjLx626Z5AaGOUZUIvIlq7rtWFQh6kDQ")
 
+@bot.on_message(filters.command('forward'))
 async def start(bot, message):
   try:
     for i in range(0, 5372):
