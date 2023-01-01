@@ -9,6 +9,6 @@ async def start(bot, message):
     for i in range(0, 5372):
        await bot.copy_message(chat_id=-1001525314409, from_chat_id=-1001665685493,message_id=i)
   except:
-       print("error")
+       pass
 
 bot.run()
