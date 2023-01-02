@@ -15,8 +15,9 @@ async def start(bot, message):
       await bot.copy_message(chat_id=-1001525314409, from_chat_id=-1001665685493,message_id=i)
       time.sleep(5)
   except:
-      pass
-         return
+       pass
+        return
+    else:
   except Exception as e:
        await bot.send_message(message.from_user.id,f"Forwading Stopped\n\nERROR : {e}")
        
