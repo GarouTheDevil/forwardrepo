@@ -16,7 +16,7 @@ async def start(bot, message):
       time.sleep(5)
   except:
        pass
-    else:
+    try:
        await bot.send_message(message.from_user.id,f"Forwading Stopped\n\nERROR : {e}")
        
 bot.run()
