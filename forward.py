@@ -11,7 +11,7 @@ async def start(bot, message):
   await bot.send_message(message.from_user.id,f"Forwading Started")
 
   try:
-    for i in range(152, 12065):
+    for i in range(0, 5372):
       await bot.copy_message(chat_id=-1001871401668, from_chat_id=-1001748041723,message_id=i)
       time.sleep(5)
   except Exception as e:
