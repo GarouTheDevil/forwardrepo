@@ -1,11 +1,10 @@
-FROM python:3.9
+FROM python:3.9-slim-buster
 
-WORKDIR /app
+# Install all the required packages
+WORKDIR /usr/src/app
+RUN chmod 777 /usr/src/app
+RUN apt-get -qq update
+RUN apt-get -qq install -y --no-install-recommends curl git 
 
-COPY requirements.txt /app/
-
-RUN pip3 install -r requirements.txt
-
-COPY . /app
-
-CMD python3 -m forward.py
+COPY requirements.txt .
+RUN pip3 install --no-cache-dir -r requirements.txt
