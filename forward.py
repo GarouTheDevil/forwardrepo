@@ -13,7 +13,7 @@ async def start(bot, message):
   try:
     for i in range(2054, 4166):
       await bot.copy_message(chat_id=-1001525314409, from_chat_id= -1001260881403,message_id=i)
-      time.sleep(05)
+      time.sleep(5)
   except:
        pass
 bot.run()
